@@ -1,30 +1,40 @@
-# 🔐 HTB Writeups — Yan Barroso
+# HTB Writeups — Yan Barroso
 
-Repositório pessoal com writeups das máquinas que pratiquei no [Hack The Box](https://www.hackthebox.com/). Cada máquina resolvida vira um arquivo em Markdown com o passo a passo do processo, desde o reconhecimento até a escalada de privilégios.
+<p align="center">
+  <a href="https://github.com/yanbarroso">
+    <img src="https://img.shields.io/badge/GitHub-yanbarroso-181717?style=for-the-badge&logo=github" alt="GitHub">
+  </a>
+  <a href="https://app.hackthebox.com/users/3468054?profile-top-tab=machines&ownership-period=1M&profile-bottom-tab=prolabs">
+    <img src="https://img.shields.io/badge/Hack%20The%20Box-YanBarroso%20%23BR-9FEF00?style=for-the-badge&logo=hackthebox&logoColor=black" alt="Hack The Box">
+  </a>
+  <img src="https://img.shields.io/badge/Writeups-Markdown-blue?style=for-the-badge&logo=markdown" alt="Markdown">
+</p>
 
-> **Objetivo:** documentar meus estudos em segurança ofensiva, consolidar aprendizado prático e manter uma base de consulta para revisões futuras.
+Repositório pessoal com writeups das máquinas que pratiquei no [Hack The Box](https://www.hackthebox.com/). Cada máquina resolvida vira um arquivo em Markdown com o processo de reconhecimento, enumeração, exploração e escalada de privilégios.
+
+> Este repositório funciona como diário técnico, material de revisão e histórico da minha evolução em segurança ofensiva.
 
 ---
 
-## 📚 Sobre este repositório
+## Visão geral
 
-Este projeto foi criado para organizar minha jornada de estudos em pentest e laboratório ofensivo. A ideia é manter uma documentação clara, reproduzível e progressiva, facilitando tanto a revisão dos conceitos quanto a visualização da minha evolução técnica.
+A proposta é manter writeups claros, reproduzíveis e organizados. Em vez de guardar anotações soltas, cada máquina passa a ter uma documentação própria, com comandos, hipóteses, exploração, pós-exploração e aprendizados.
 
-Cada writeup pode incluir:
+Os writeups podem incluir:
 
 - Reconhecimento inicial
-- Enumeração de serviços
+- Enumeração de serviços e tecnologias
 - Exploração da vulnerabilidade
-- Obtenção da flag de usuário
+- Captura da flag de usuário
 - Escalada de privilégios
-- Obtenção da flag de root/administrator
-- Lições aprendidas
+- Captura da flag final
+- Lições aprendidas e referências
 
 ---
 
-## 📋 Índice de máquinas
+## Índice de máquinas
 
-| Máquina | OS | Dificuldade | Técnicas | Status |
+| Máquina | SO | Dificuldade | Técnicas | Status |
 |---|---|---|---|---|
 | Em breve | — | — | — | 🔄 Preparando estrutura |
 
@@ -32,7 +42,7 @@ Cada writeup pode incluir:
 
 ---
 
-## 🗂️ Estrutura do projeto
+## Estrutura do repositório
 
 ```text
 htb-writeups/
@@ -46,43 +56,30 @@ htb-writeups/
     └── cheatsheet.md
 ```
 
-### Organização
+### Organização das pastas
 
-- `README.md`: visão geral do repositório e índice das máquinas.
-- `TEMPLATE.md`: modelo base para criar novos writeups.
-- `machines/easy`, `machines/medium`, `machines/hard`: separação por dificuldade.
-- `notes/cheatsheet.md`: comandos úteis e referência rápida para laboratório.
-
----
-
-## 🧠 Tópicos estudados
-
-As máquinas documentadas aqui podem envolver, entre outros temas:
-
-- Reconhecimento com `nmap`, `whatweb`, `ffuf`, `gobuster`
-- Enumeração de serviços como SMB, FTP, SSH, RDP, WinRM e NFS
-- Vulnerabilidades web como SQL Injection, LFI, RFI, SSRF, XSS e IDOR
-- Exploração de bancos de dados como MySQL, Redis, MongoDB e MSSQL
-- Escalada de privilégios em Linux e Windows
-- Abordagens de Active Directory, conforme os laboratórios evoluírem
+- `README.md` — visão geral do projeto e índice das máquinas.
+- `TEMPLATE.md` — modelo base para padronizar novos writeups.
+- `machines/easy` — máquinas de dificuldade easy.
+- `machines/medium` — máquinas de dificuldade medium.
+- `machines/hard` — máquinas de dificuldade hard.
+- `notes/cheatsheet.md` — comandos e referências rápidas para laboratório.
 
 ---
 
-## ⚙️ Fluxo de documentação
-
-Para manter consistência entre os writeups, o processo de documentação segue este padrão:
+## Fluxo de documentação
 
 1. Resolver a máquina no laboratório.
-2. Registrar comandos, portas, credenciais, vetores e observações.
-3. Copiar o `TEMPLATE.md` e adaptar para a máquina atual.
-4. Salvar o arquivo na pasta correspondente à dificuldade.
+2. Registrar portas, versões, vetores, credenciais e observações.
+3. Duplicar o `TEMPLATE.md`.
+4. Salvar o writeup na pasta correspondente à dificuldade.
 5. Atualizar a tabela de índice neste README.
 
 ---
 
-## ✅ Padrão de nomenclatura
+## Convenção de nomes
 
-Os arquivos de writeup seguem um padrão simples e previsível:
+Todos os writeups seguem o padrão:
 
 ```text
 HTB-NomeDaMaquina.md
@@ -96,7 +93,20 @@ Exemplos:
 
 ---
 
-## 🛠️ Ambiente utilizado
+## Tópicos estudados
+
+As máquinas deste repositório podem envolver assuntos como:
+
+- Reconhecimento com `nmap`, `whatweb`, `ffuf`, `gobuster`
+- Enumeração de serviços como SMB, FTP, SSH, RDP, WinRM e NFS
+- Vulnerabilidades web como SQL Injection, LFI, RFI, SSRF, XSS e IDOR
+- Bancos de dados como MySQL, Redis, MongoDB e MSSQL
+- Escalada de privilégios em Linux e Windows
+- Técnicas de Active Directory, conforme a trilha de estudos avançar
+
+---
+
+## Ambiente de estudo
 
 | Ferramenta | Uso principal |
 |---|---|
@@ -105,26 +115,26 @@ Exemplos:
 | Burp Suite | Interceptação e análise web |
 | VS Code / Obsidian | Escrita e organização das notas |
 | LinPEAS / WinPEAS | Enumeração local |
-| Metasploit | Apoio em exploração, quando aplicável |
+| Metasploit | Apoio em exploração, quando necessário |
 
 ---
 
-## 🎯 Objetivo de evolução
+## Objetivo do projeto
 
-Este repositório não serve apenas para guardar soluções. Ele também funciona como trilha de estudo, histórico de prática e material de revisão para fixar técnicas, padrões de enumeração e caminhos de exploração.
+Este repositório não existe só para armazenar soluções. Ele serve para consolidar método, melhorar capacidade de enumeração, registrar padrões de ataque e criar um material de consulta rápido para estudos futuros.
 
-Com o tempo, a tendência é que os writeups fiquem mais completos, mais objetivos e melhor estruturados.
-
----
-
-## ⚠️ Aviso legal
-
-Todo o conteúdo deste repositório se refere exclusivamente a ambientes controlados e autorizados, especialmente laboratórios do Hack The Box. O material tem finalidade estritamente educacional.
+Com o tempo, a tendência é que os writeups fiquem mais completos, mais limpos e mais consistentes.
 
 ---
 
-## 🔗 Perfis
+## Perfis
 
 - GitHub: [yanbarroso](https://github.com/yanbarroso)
+- Hack The Box: [YanBarroso #BR](https://app.hackthebox.com/users/3468054?profile-top-tab=machines&ownership-period=1M&profile-bottom-tab=prolabs)
 - Autor: Yan Barroso
-- HTB Profile: adicionar depois
+
+---
+
+## Aviso legal
+
+Todo o conteúdo deste repositório se refere exclusivamente a ambientes controlados e autorizados, especialmente laboratórios do Hack The Box. O material tem finalidade estritamente educacional.
