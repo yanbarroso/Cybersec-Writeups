@@ -36,7 +36,11 @@ Os writeups podem incluir:
 
 | Máquina | SO | Dificuldade | Técnicas | Status |
 |---|---|---|---|---|
-| Em breve | — | — | — | 🔄 Preparando estrutura |
+| [Meow](./machines/easy/HTB-Meow.md) | Linux | Very Easy | `telnet`, `blank-password` | ✅ |
+| [Fawn](./machines/easy/HTB-Fawn.md) | Linux | Very Easy | `ftp`, `anonymous-login` | ✅ |
+| [Dancing](./machines/easy/HTB-Dancing.md) | Windows | Very Easy | `smb`, `guest-access` | ✅ |
+| [Redeemer](./machines/easy/HTB-Redeemer.md) | Linux | Very Easy | `redis`, `enumeration` | ✅ |
+| [Cap](./machines/easy/HTB-Cap.md) | Linux | Easy | `idor`, `pcap`, `capabilities` | ✅ |
 
 > Legenda: ✅ Concluída · 🔄 Em progresso · ⏳ Pendente
 
