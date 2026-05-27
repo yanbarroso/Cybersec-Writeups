@@ -36,12 +36,13 @@ Os writeups podem incluir:
 
 | Máquina | SO | Dificuldade | Técnicas | Status |
 |---|---|---|---|---|
-| [Meow](./machines/easy/HTB-Meow.md) | Linux | Very Easy | `telnet`, `blank-password` | ✅ |
-| [Fawn](./machines/easy/HTB-Fawn.md) | Linux | Very Easy | `ftp`, `anonymous-login` | ✅ |
-| [Dancing](./machines/easy/HTB-Dancing.md) | Windows | Very Easy | `smb`, `guest-access` | ✅ |
-| [Redeemer](./machines/easy/HTB-Redeemer.md) | Linux | Very Easy | `redis`, `enumeration` | ✅ |
-| [Cap](./machines/easy/HTB-Cap.md) | Linux | Easy | `idor`, `pcap`, `capabilities` | ✅ |
+| [Meow](./machines/starting-point/HTB-Meow.md) | Linux | Very Easy | `telnet`, `blank-password` | ✅ |
+| [Fawn](./machines/starting-point/HTB-Fawn.md) | Linux | Very Easy | `ftp`, `anonymous-login` | ✅ |
+| [Dancing](./machines/starting-point/HTB-Dancing.md) | Windows | Very Easy | `smb`, `guest-access` | ✅ |
+| [Redeemer](./machines/starting-point/HTB-Redeemer.md) | Linux | Very Easy | `redis`, `enumeration` | ✅ |
+| [Cap](./machines/starting-point/HTB-Cap.md) | Linux | Easy | `idor`, `pcap`, `capabilities` | ✅ |
 | [Appointment](./machines/easy/HTB-Appointment.md) | Linux | Very Easy | `sql injection`, `authentication bypass` | ✅ |
+| [Sequel](./machines/starting-point/HTB-Sequel.md) | Linux | Easy | `mariadb`, `mysql`, `database` | ✅ |
 
 > Legenda: ✅ Concluída · 🔄 Em progresso · ⏳ Pendente
 
